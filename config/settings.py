@@ -25,7 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'monetizeyourself',
-    'users'
+    'users',
+    'payment'
 ]
 
 MIDDLEWARE = [
@@ -86,7 +87,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -94,11 +95,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-# AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "users.User"
 
-# LOGOUT_REDIRECT_URL = "/"
-# LOGIN_REDIRECT_URL = "/"
-# LOGIN_URL = "/users/"
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/"
+LOGIN_URL = "/users/"
 
 
 STATIC_URL = "static/"
