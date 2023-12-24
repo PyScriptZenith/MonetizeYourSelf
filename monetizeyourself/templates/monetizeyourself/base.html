@@ -23,8 +23,8 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Home
+      <a href="{% url 'monetizeyourself:post_create' %}" class="navbar-item">
+        Добавить контент
       </a>
 
       <a class="navbar-item">
@@ -78,46 +78,7 @@
       </p>
     </div>
   </section>
-  <div class="columns">
-  <div class="column">
-    <form class="box">
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control">
-      <input class="input" type="email" placeholder="e.g. alex@example.com">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label">Password</label>
-    <div class="control">
-      <input class="input" type="password" placeholder="********">
-    </div>
-  </div>
-
-  <button class="button is-primary">Sign in</button>
-</form>
-  </div>
-  <div class="column">
-    <div class="box">
-  I'm in a box.
-</div>
-  </div>
-  <div class="column">
-    <article class="message">
-  <div class="message-header">
-    <p>Hello World</p>
-    <button class="delete" aria-label="delete"></button>
-  </div>
-  <div class="message-body">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-  </div>
-</article>
-  </div>
-</div>
-
-</div>
-
-
-  </body>
+   </body>
 </html>
+{% block content %}
+    {% endblock %}
