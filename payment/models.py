@@ -13,10 +13,14 @@ class Payment(models.Model):
     is_confirmed = models.BooleanField(
         default=False, verbose_name="подтверждение оплаты"
     )
+    stripe_session_id = models.TextField(verbose_name='id платежной сессии', **NULLABLE)
 
     def __str__(self):
         return (
-            f"{self.user}, {self.amount}: {self.is_confirmed}"
+            f"Пользователь -  {self.user},\n"
+            f"Сумма оплаты - {self.amount} \n"
+            f"Оплата подтверждена - {self.is_confirmed} \n"
+            f"id сессии stripe {self.stripe_session_id} \n"
         )
 
     class Meta:
@@ -26,17 +30,4 @@ class Payment(models.Model):
         ordering = ("date",)
 
 
-class Subscription(models.Model):
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, verbose_name="пользователь",
-        related_name='subsription', **NULLABLE
-    )
-    is_subscribed = models.BooleanField(default=False, verbose_name='наличие подписки')
-
-    def __str__(self):
-        return f"{self.user} : {self.is_subscribed}"
-
-    class Meta:
-        verbose_name = "подписка"
-        verbose_name_plural = "подписки"
 

@@ -5,9 +5,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
+        <style>
+    .red-text-button {
+        color: red;
+    }
+</style>
     </head>
     <body>
-    {% for post in posts %}
     <div class="columns">
 
         <div class="column">
@@ -15,7 +19,7 @@
                 <article class="media">
                     <div class="media-left">
                         <figure class="image is-64x64">
-                        <img src="{{ post.image.url }}" alt="Image">
+                            <img src="{{ post.image.url }}" alt="Image">
                         </figure>
                     </div>
 
@@ -23,18 +27,18 @@
                         <div class="content">
 
                             <p>
-                                <small>
-                                    {% if post.owner.nick_name %}
-                                    written by @{{ post.owner.nick_name }}
-                                {% endif %}
-                                </small>
+                                <strong>{{ post.owner.phone }}</strong> <small>@johnsmith</small>
+                                <small>@{{ post.owner.nick_name }}</small>
                                 <br>
-                                {{ post.text|truncatechars:100 }}
+                                {{ post.text }}
                             </p>
+                            {% if user == post.owner %}
+                            <a href="{% url 'monetizeyourself:post_update' post.pk %}"
+                               class="button is-small">Редактировать</a>
+                            <a href="{% url 'monetizeyourself:post_delete' post.pk %}"
+                               class="button is-small is-responsive red-text-button">Удалить</a>
+                            {% endif %}
                         </div>
-                            <a href="{% url 'monetizeyourself:post_detail' post.pk %}" class="button is-small">Смотреть</a>
-
-
                         <nav class="level is-mobile">
                             <div class="level-left">
                                 <a class="level-item" aria-label="reply">
@@ -59,10 +63,9 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+
     </body>
 
     </html>
 
 {% endblock %}
-

@@ -21,7 +21,7 @@
     </a>
   </div>
 
- <div id="navbarBasicExample" class="navbar-menu">
+   <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
 
             <a href="{% url 'monetizeyourself:post_list' %}" class="navbar-item">
@@ -65,40 +65,88 @@
             </div>
         </div>
     </div>
+
 </nav>
-  <section class="section">
+<section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+        <h1 class="title">
+            MonetizeYourSelf
+        </h1>
+        <p class="subtitle">
+            Your first money with <strong>Yourself</strong> !
+        </p>
     </div>
-  </section>
+</section>
+  <section class="section">
+  <h1 class="title">Приобретение подписки</h1>
+</section>
+  <div class="columns">
+
+        <div class="column">
+            <div class="box">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                        <img src="{% static 'logo/logo.JPG' %}" alt="Image">
+                        </figure>
+                    </div>
+
+                    <div class="media-content">
+                        <div class="content">
+
+                            <p>
+                                <strong>Бессрочная подписка на платный контент MonetizeTourSelf</strong>
+                                <br>
+                                1000 RUR
+                            </p>
+                        </div>
+
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+                                </a>
+                                <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+                                </a>
+                                <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
 {% load crispy_forms_tags %}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
- <form method="post" enctype="multipart/form-data">
-{{ form.as_p }}
-     {% csrf_token %}
+  <form action="{% url 'payment:payment_create' %}" method="POST">
+          {% csrf_token %}
+        <button type="submit" class="button is-success is-rounded" id="checkout-button">Приобрести</button>
+      </form>
 <section class="section">
-  <h1 class="title">Section</h1>
+  <h1 class="title"></h1>
   <h2 class="subtitle">
-    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
-  </h2>
+      </h2>
 </section>
-     <button type="submit" href="{% url 'monetizeyourself:post_create' %}" class="button is-success is-rounded">Сохранить</button>
      <section class="section">
-  <h1 class="title">Section</h1>
+  <h1 class="title"></h1>
   <h2 class="subtitle">
-    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
-  </h2>
+      </h2>
 </section>
-     </form>
+
 </body>
 
 {% endblock %}

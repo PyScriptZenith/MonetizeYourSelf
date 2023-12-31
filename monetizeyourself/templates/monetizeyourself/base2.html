@@ -201,23 +201,7 @@
     <header>
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
             <div class="button-container">
-{#                  {% if user.is_authenticated %}#}
-{#                    <a href="{% url 'users:profile' %}" class="custom-button">Профиль</a>#}
-{#                    <a href="{% url 'users:logout' %}" class="custom-button">Выход</a>#}
-{#                    <a href="{% url 'dispatch:index' %}" class="custom-button">На главную</a>#}
-{#                    <a href="{% url 'dispatch:dispatch_list' %}" class="custom-button">К рассылкам</a>#}
-{#                    <a href="{% url 'dispatch:message_list' %}" class="icon-link"> К сообщениям</a>#}
-{#                    <a href="{% url 'dispatch:client_list' %}" class="icon-link"> К клиентам</a>#}
-{#                    <a href="{% url 'blog:blog_list' %}" class="icon-link"> Блог</a>#}
-{##}
-{#                {% else %}#}
-{#                    <a href="{% url 'users:login' %}" class="custom-button">Вход</a>#}
-{#                    <a href="{% url 'users:register' %}" class="custom-button">Регистрация</a#}
-{#                {% endif %}#}
-{##}
-{#                {% if request.user|has_group:"moderator" %}#}
-{#                    <a href="{% url 'users:user_list' %}" class="custom-button">Все пользователи</a>#}
-{#                {% endif %}#}
+
             </div>
         </div>
     </header>

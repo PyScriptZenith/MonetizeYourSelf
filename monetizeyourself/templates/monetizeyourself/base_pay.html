@@ -21,13 +21,12 @@
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
 
             <a href="{% url 'monetizeyourself:post_list' %}" class="navbar-item">
                 Главная
             </a>
-           {% if user.is_authenticated %}
             <a href="{% url 'monetizeyourself:post_create' %}" class="navbar-item">
                 Добавить контент
             </a>
@@ -38,7 +37,8 @@
             <a href="{% url 'payment:payment' %}" class="navbar-item has-text-info">
                 Оформить подписку
             </a>
-            {% endif %}
+
+
         </div>
 
         <div class="navbar-end">
@@ -65,14 +65,16 @@
             </div>
         </div>
     </div>
+
 </nav>
 <section class="section">
     <div class="container">
         <h1 class="title">
-            MonetizeYourSelf
+            Pay money and see:)
         </h1>
         <p class="subtitle">
-            Your first money with <strong>Yourself</strong>!
+
+            {{ boo }}
         </p>
     </div>
 </section>
