@@ -20,6 +20,9 @@ class PostCreateView(CreateView):
     success_url = reverse_lazy("monetizeyourself:post_list")
 
     def form_valid(self, form):
+
+        # При создании поста - объект автоматически привязывается к пользователю
+
         self.object = form.save(commit=False)
         self.object.owner = self.request.user
         self.object.save()
