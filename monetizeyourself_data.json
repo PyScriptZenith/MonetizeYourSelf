@@ -1,0 +1,98 @@
+[
+  {
+    "model": "monetizeyourself.post",
+    "pk": 3,
+    "fields": {
+      "owner": 6,
+      "header": "Free_01",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/1.jpg",
+      "is_free": true,
+      "published_date": "2024-01-01"
+    }
+  },
+  {
+    "model": "monetizeyourself.post",
+    "pk": 4,
+    "fields": {
+      "owner": 7,
+      "header": "Free_02",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/2.jpg",
+      "is_free": true,
+      "published_date": "2024-01-01"
+    }
+  },
+  {
+    "model": "monetizeyourself.post",
+    "pk": 5,
+    "fields": {
+      "owner": 8,
+      "header": "Free_03",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/1667676921_12-sportishka-com-p-samie-krasivie-krossovki-v-mire-pinterest-12.jpg",
+      "is_free": true,
+      "published_date": "2024-01-01"
+    }
+  },
+  {
+    "model": "monetizeyourself.post",
+    "pk": 6,
+    "fields": {
+      "owner": 9,
+      "header": "Free_04",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/5.jpg",
+      "is_free": true,
+      "published_date": "2024-01-01"
+    }
+  },
+  {
+    "model": "monetizeyourself.post",
+    "pk": 7,
+    "fields": {
+      "owner": 6,
+      "header": "Payable_01",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/1b493e710a9ad8173ee4549a3ad13c33.jpg",
+      "is_free": false,
+      "published_date": "2024-01-01"
+    }
+  },
+  {
+    "model": "monetizeyourself.post",
+    "pk": 8,
+    "fields": {
+      "owner": 7,
+      "header": "Payeable_02",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/bugv046.jpg",
+      "is_free": false,
+      "published_date": "2024-01-01"
+    }
+  },
+  {
+    "model": "monetizeyourself.post",
+    "pk": 9,
+    "fields": {
+      "owner": 9,
+      "header": "Payable_03",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/d55cfadd409f4a7ae27fb852923372fb.jpeg",
+      "is_free": false,
+      "published_date": "2024-01-01"
+    }
+  },
+  {
+    "model": "monetizeyourself.post",
+    "pk": 10,
+    "fields": {
+      "owner": 8,
+      "header": "Payable_04",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "images/38fe92d56d79137855b43d27766bc44c.jpg",
+      "is_free": false,
+      "published_date": "2024-01-01"
+    }
+  }
+]

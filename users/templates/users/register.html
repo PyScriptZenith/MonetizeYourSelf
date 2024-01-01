@@ -1,0 +1,104 @@
+{% extends 'monetizeyourself/base2.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello Bulma!</title>
+        <link rel="stylesheet" href={% static 'css/bulma.css' %}>
+    </head>
+    <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+
+                <a href="{% url 'monetizeyourself:post_list' %}" class="navbar-item">
+                    Главная
+                </a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'monetizeyourself:post_create' %}" class="navbar-item">
+                        Добавить контент
+                    </a>
+
+                    <a href="{% url 'monetizeyourself:post_payed_list' %}" class="navbar-item">
+                        Платный контент
+                    </a>
+                    <a href="{% url 'payment:payment' %}" class="navbar-item has-text-info">
+                        Оформить подписку
+                    </a>
+                {% endif %}
+
+            </div>
+
+    <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'users:profile' pk=user.pk %}" class="button is-primary">
+                            <strong>Профиль</strong>
+                        </a>
+
+                       <a href="{% url 'users:logout' %}" class="button is-link">
+                            <strong>Выйти</strong>
+                        </a>
+                    {% else %}
+                        <a href="{% url 'users:login' %}" class="button is-light">
+                            Войти
+                        </a>
+                        <a href="{% url 'users:register' %}" class="button is-primary">
+                            <strong>Зарегистрироваться</strong>
+                        </a>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+ <section class="section">
+    <div class="container">
+        <h1 class="title">
+            MonetizeYourSelf
+        </h1>
+        <p class="subtitle">
+            Your first money with <strong>Yourself</strong>!
+        </p>
+    </div>
+</section>
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form method="post" enctype="multipart/form-data">
+{{ form.as_p }}
+     {% csrf_token %}
+<section class="section">
+  <h1 class="title"></h1>
+  <h2 class="subtitle">
+  </h2>
+</section>
+     <button type="submit" class="button is-success is-rounded">Зарегистрироваться</button>
+     <section class="section">
+  <h1 class="title"></h1>
+  <h2 class="subtitle">
+  </h2>
+</section>
+     </form>
+</body>
+
+{% endblock %}
