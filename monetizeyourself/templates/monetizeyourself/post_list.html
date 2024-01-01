@@ -15,7 +15,9 @@
                 <article class="media">
                     <div class="media-left">
                         <figure class="image is-64x64">
+                            {% if post.image %}
                         <img src="{{ post.image.url }}" alt="Image">
+                            {% endif %}
                         </figure>
                     </div>
 

@@ -13,7 +13,7 @@ class Payment(models.Model):
     is_confirmed = models.BooleanField(
         default=False, verbose_name="подтверждение оплаты"
     )
-    stripe_session_id = models.TextField(verbose_name='id платежной сессии', **NULLABLE)
+    stripe_session_id = models.TextField(verbose_name="id платежной сессии", **NULLABLE)
 
     def __str__(self):
         return (
@@ -28,6 +28,3 @@ class Payment(models.Model):
         verbose_name_plural = "платежи"
 
         ordering = ("date",)
-
-
-

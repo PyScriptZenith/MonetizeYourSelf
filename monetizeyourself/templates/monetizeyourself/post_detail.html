@@ -6,10 +6,10 @@
         <meta charset="UTF-8">
         <title>Title</title>
         <style>
-    .red-text-button {
-        color: red;
-    }
-</style>
+            .red-text-button {
+                color: red;
+            }
+        </style>
     </head>
     <body>
     <div class="columns">
@@ -19,7 +19,9 @@
                 <article class="media">
                     <div class="media-left">
                         <figure class="image is-64x64">
-                            <img src="{{ post.image.url }}" alt="Image">
+                            {% if post.image %}
+                                <img src="{{ post.image.url }}" alt="Image">
+                            {% endif %}
                         </figure>
                     </div>
 
@@ -27,16 +29,25 @@
                         <div class="content">
 
                             <p>
-                                <strong>{{ post.owner.phone }}</strong> <small>@johnsmith</small>
-                                <small>@{{ post.owner.nick_name }}</small>
+                                <small>
+                                    {% if post.owner.nick_name %}
+                                        written by @{{ post.owner.nick_name }}
+                                    {% endif %}
+                                </small>
                                 <br>
+                            <strong>
+                                {% if post.header %}
+                                {{ post.header }}
+                                {% endif %}
+                            </strong>
+                            <br>
                                 {{ post.text }}
                             </p>
                             {% if user == post.owner %}
-                            <a href="{% url 'monetizeyourself:post_update' post.pk %}"
-                               class="button is-small">Редактировать</a>
-                            <a href="{% url 'monetizeyourself:post_delete' post.pk %}"
-                               class="button is-small is-responsive red-text-button">Удалить</a>
+                                <a href="{% url 'monetizeyourself:post_update' post.pk %}"
+                                   class="button is-small">Редактировать</a>
+                                <a href="{% url 'monetizeyourself:post_delete' post.pk %}"
+                                   class="button is-small is-responsive red-text-button">Удалить</a>
                             {% endif %}
                         </div>
                         <nav class="level is-mobile">

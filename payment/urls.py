@@ -7,8 +7,8 @@ app_name = PaymentConfig.name
 
 
 urlpatterns = [
-    path('', PaymentIndex.as_view(), name='payment'),
-    path('create_payment/', PaymentCreateView.as_view(), name='payment_create'),
-    path('success/', SuccessView.as_view(), name='success'),
-    path('cancel/', CancelView.as_view(), name='cancel'),
-    ]
+    path("", PaymentIndex.as_view(), name="payment"),
+    path("create_payment/", PaymentCreateView.as_view(), name="payment_create"),
+    path("success/", SuccessView.as_view(), name="success"),
+    path("cancel/", CancelView.as_view(), name="cancel"),
+]

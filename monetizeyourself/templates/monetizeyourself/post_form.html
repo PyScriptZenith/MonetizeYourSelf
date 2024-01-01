@@ -66,16 +66,16 @@
         </div>
     </div>
 </nav>
-  <section class="section">
+<section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+        <h1 class="title">
+            MonetizeYourSelf
+        </h1>
+        <p class="subtitle">
+            Your first money with <strong>Yourself</strong>!
+        </p>
     </div>
-  </section>
+</section>
 {% load crispy_forms_tags %}
 <head>
     <meta charset="UTF-8">
@@ -86,16 +86,12 @@
 {{ form.as_p }}
      {% csrf_token %}
 <section class="section">
-  <h1 class="title">Section</h1>
-  <h2 class="subtitle">
-    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
-  </h2>
+  <h1 class="title"></h1>
 </section>
      <button type="submit" href="{% url 'monetizeyourself:post_create' %}" class="button is-success is-rounded">Сохранить</button>
      <section class="section">
-  <h1 class="title">Section</h1>
+  <h1 class="title"></h1>
   <h2 class="subtitle">
-    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
   </h2>
 </section>
      </form>

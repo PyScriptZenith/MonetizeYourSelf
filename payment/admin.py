@@ -8,4 +8,10 @@ from payment.models import Payment
 
 @admin.register(Payment)
 class PaymentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'date', 'amount', 'is_confirmed', 'stripe_session_id',)
+    list_display = (
+        "user",
+        "date",
+        "amount",
+        "is_confirmed",
+        "stripe_session_id",
+    )

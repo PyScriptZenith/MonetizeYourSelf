@@ -8,5 +8,11 @@ from monetizeyourself.models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('owner', 'header', 'text', 'image', 'is_free', 'published_date',)
-
+    list_display = (
+        "owner",
+        "header",
+        "text",
+        "image",
+        "is_free",
+        "published_date",
+    )

@@ -5,7 +5,6 @@ from payment.models import Payment
 
 
 class PaymentForm(StyleMixin, forms.ModelForm):
-
     class Meta:
         model = Payment
-        fields = '__all__'
+        fields = "__all__"
